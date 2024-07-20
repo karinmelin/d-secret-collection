@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Product 1",
+    "image": "/images/dior-logo.png"
+  },
+  {
+    "id": 2,
+    "title": "Product 2",
+    "image": "/images/dior-logo.png"
+  },
+  {
+    "id": 3,
+    "title": "Product 3",
+    "image": "/images/dior-logo.png"
+  },
+  {
+    "id": 4,
+    "title": "Product 4",
+    "image": "/images/dior-logo.png"
+  },
+  {
+    "id": 5,
+    "title": "Product 5",
+    "image": "/images/dior-logo.png"
+  }
+]
