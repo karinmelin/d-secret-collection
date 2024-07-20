@@ -1,0 +1,38 @@
+@import "../../breakpoints.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: pink;
+
+  @media (min-width: $layout-breakpoint-tablet) {
+    background-color: green;
+  }
+}
+
+.diorLogo {
+  height: 28px;
+  width: 98px;
+
+  @media (min-width: $layout-breakpoint-tablet) {
+    height: 28px;
+    width: 128px;
+  }
+
+  @media (min-width: $layout-breakpoint-desktop) {
+    height: 43px;
+    width: 153px;
+  }
+}
+
+.cartIcon {
+  height: 29px;
+  width: 29px;
+
+  @media (min-width: $layout-breakpoint-desktop) {
+    height: 48px;
+    width: 48px;
+  }
+}
