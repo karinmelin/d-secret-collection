@@ -9,13 +9,17 @@
   appearance: none;
 }
 
+.buttonLinkWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
 .icon {
-  background-color: blue;
+  margin-right: 10px;
 }
 
 .button {
   @include unbuttonize;
   cursor: pointer;
   text-transform: uppercase;
-  background-color: lightblue;
 }

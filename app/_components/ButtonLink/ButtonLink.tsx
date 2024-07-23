@@ -7,6 +7,7 @@ type ButtonLinkProps = {
   text: string;
   height: number;
   width: number;
+  handleButtonLinkClick: () => void;
 };
 
 const ButtonLink = ({
@@ -15,20 +16,22 @@ const ButtonLink = ({
   text,
   height = 32,
   width = 32,
+  handleButtonLinkClick,
 }: ButtonLinkProps) => {
   return (
-    <>
-      <div className={styles.icon}>
+    <div className={styles.buttonLinkWrapper}>
+      <button className={styles.button} onClick={handleButtonLinkClick}>
         <BaseIcon
+          className={styles.icon}
           src={icon}
           alt={iconAltText}
           width={width}
           height={height}
           priority
         />
-      </div>
-      <button className={styles.button}>{text}</button>
-    </>
+        {text}
+      </button>
+    </div>
   );
 };
 
