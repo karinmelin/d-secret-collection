@@ -1,5 +1,6 @@
 import styles from "../page.module.css";
-import { Header, TopMenu } from "@components";
+import { Button, Carousel, Header, TopMenu } from "@components";
+import carouselData from '../_data/carousel-data.json';
 
 const Products = () => {
   return (
@@ -7,7 +8,8 @@ const Products = () => {
       <Header />
       <main className={styles.main}>
         <TopMenu />
-        <div>You're on the product page</div>
+        <Carousel slides={carouselData} />
+        <Button text={"Add to cart"} />
       </main>
     </>
   );
