@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Albert_Sans } from "next/font/google";
+import ApolloWrapper from "../lib/apollo-wrapper";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const albertSans = Albert_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Dior Showroom",
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={albertSans.className}>
+        <ApolloWrapper>{children}</ApolloWrapper>
+      </body>
     </html>
   );
 }
