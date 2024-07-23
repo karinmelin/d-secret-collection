@@ -1,24 +1,28 @@
+@import './../../breakpoints.scss';
+
 .swiperWrapper {
   width: 100vw;
   height: 100%;
+  margin-bottom: 2rem;
 }
 
-.swiper {
-  h2 {
-    color: red;
+// .swiper {
+// }
+
+// .activeSlide {
+// }
+
+.nextSlide {
+  @media (min-width: $layout-breakpoint-desktop) {
+    opacity: 0.5;
+    transform: scale(0.7) !important;
   }
 }
 
-.activeSlide {
-  background-color: black;
-}
-
-.nextSlide {
-  opacity: 0.5;
-  transform: scale(0.7);
-}
-
 .prevSlide {
-  opacity: 0.5;
-  transform: scale(0.7);
+  @media (min-width: $layout-breakpoint-desktop) {
+    opacity: 0.5;
+    transform: scale(0.7) !important;
+  }
 }
+

@@ -2,26 +2,25 @@
   {
     "id": 1,
     "title": "Product 1",
-    "image": "/images/dior-logo.png"
+    "image": "/images/product1-1.png",
+    "imageAlt": "product-1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 19000
   },
   {
     "id": 2,
     "title": "Product 2",
-    "image": "/images/dior-logo.png"
+    "image": "/images/product1-1.png",
+    "imageAlt": "product-1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 19000
   },
   {
     "id": 3,
     "title": "Product 3",
-    "image": "/images/dior-logo.png"
-  },
-  {
-    "id": 4,
-    "title": "Product 4",
-    "image": "/images/dior-logo.png"
-  },
-  {
-    "id": 5,
-    "title": "Product 5",
-    "image": "/images/dior-logo.png"
+    "image": "/images/product1-1.png",
+    "imageAlt": "product-1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 19000
   }
 ]

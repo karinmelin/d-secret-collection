@@ -1,70 +1,59 @@
-// import Swiper bundle with all modules installed
 "use client";
-import Swiper from "swiper/bundle";
+
+import { FunctionComponent } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/scss";
+import "swiper/scss/navigation";
 import styles from "./Carousel.module.scss";
 
-// import styles bundle
-import "swiper/css/bundle";
+import { register } from "swiper/element/bundle";
+import useIsMobile from "@/app/_utilites/useIsMobile";
+import { Card } from "./_components/Card";
+import useIsTablet from "@/app/_utilites/useIsTablet";
+register();
 
-const Carousel = () => {
-  // init Swiper:
-  const swiper = new Swiper(".swiper", {
-    // Optional parameters
-    direction: "vertical",
-    loop: true,
-    autoHeight: true,
-    slidesPerView: 1,
+interface Slide {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  price: number;
+}
 
-    a11y: {
-      prevSlideMessage: "Previous slide",
-      nextSlideMessage: "Next slide",
-    },
+interface CarouselProps {
+  slides: Slide[];
+}
 
-    // If we need pagination
-    // pagination: {
-    //   el: ".swiper-pagination",
-    // },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-  });
-
-  const handleSlidePrev = () => {
-    swiper.slidePrev();
-  };
+const CarouselTest: FunctionComponent<CarouselProps> = ({ slides }) => {
+  const { isMobile } = useIsMobile();
+  const { isTablet } = useIsTablet();
 
   return (
-    <div className={styles.carouselWrapper}>
-      <div>Carousel japp</div>
-      <div className="swiper">
-        <div className="swiper-wrapper">
-          <div className="swiper-slide">Slide 1</div>
-          <div className="swiper-slide">Slide 2</div>
-          <div className="swiper-slide">Slide 3</div>
-        </div>
-        {/* <div className="swiper-pagination"></div> */}
-
-        <button
-          className="swiper-button-prev"
-          onClick={() => swiper.slidePrev}
-        />
-        <button
-          className="swiper-button-next"
-          onClick={() => swiper.slideNext}
-        />
-
-        <div className="swiper-scrollbar"></div>
-      </div>
-    </div>
+    <section className={styles.swiperWrapper}>
+      <ul>
+        <Swiper
+          navigation={!isMobile && !isTablet}
+          slidesPerView={isMobile || isTablet ? 1.3 : 1.7}
+          centeredSlides={true}
+          spaceBetween={20}
+          slideActiveClass={styles.activeSlide}
+          slideNextClass={styles.nextSlide}
+          slidePrevClass={styles.prevSlide}
+          watchOverflow={true}
+          className={`${styles.swiper} custom-swiper`}
+        >
+          {slides.map(slide => (
+            <SwiperSlide key={slide.id} className="custom-swiper-slide">
+              <Card
+                {...slide}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </ul>
+    </section>
   );
 };
 
-export default Carousel;
+export default CarouselTest;
