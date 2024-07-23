@@ -1,0 +1,26 @@
+@import "../../../../breakpoints.scss";
+
+.filterSubmenuWrapper {
+  position:absolute;
+  top: 0;
+  right: 60%;
+  transform: translate(25%, 25%);
+  z-index: 2;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+
+  @media (min-width: $layout-breakpoint-desktop) {
+    right: 50%;
+  }
+}
+
+.filterSubmenuList {
+  padding: 10px;
+  list-style: none;
+}
+
+.filterSubmenuItem {
+  padding-bottom: 10px;
+}
