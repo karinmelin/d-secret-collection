@@ -1,4 +1,5 @@
 import { BaseIcon } from "@components";
+import { CartButton } from "../Cart";
 import styles from "./Header.module.scss";
 
 const Header = () => {
@@ -12,16 +13,7 @@ const Header = () => {
         height={43}
         priority
       />
-      {/* Todo: update to button */}
-      <BaseIcon
-        className={styles.cartIcon}
-        src="/icons/cart.svg"
-        alt="cart"
-        width={48}
-        height={48}
-        sizes="(max-width: 1024px) 29px"
-        priority
-      />
+      <CartButton />
     </header>
   );
 };

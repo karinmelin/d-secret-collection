@@ -1,0 +1,15 @@
+@import '../../../../_styles/breakpoints.module.scss';
+
+.cartButton {
+  cursor: pointer;
+}
+
+.cartIcon {
+  height: 29px;
+  width: 29px;
+
+  @include desktop {
+    height: 48px;
+    width: 48px;
+  }
+}
