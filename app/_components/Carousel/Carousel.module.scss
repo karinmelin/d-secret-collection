@@ -1,4 +1,4 @@
-@import './../../breakpoints.scss';
+@import '../../_styles/breakpoints.module.scss';
 
 .swiperWrapper {
   width: 100vw;
@@ -6,21 +6,19 @@
   margin-bottom: 2rem;
 }
 
-// .swiper {
-// }
 
 // .activeSlide {
 // }
 
 .nextSlide {
-  @media (min-width: $layout-breakpoint-desktop) {
+  @include desktop {
     opacity: 0.5;
     transform: scale(0.7) !important;
   }
 }
 
 .prevSlide {
-  @media (min-width: $layout-breakpoint-desktop) {
+  @include desktop {
     opacity: 0.5;
     transform: scale(0.7) !important;
   }

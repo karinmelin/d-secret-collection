@@ -5,13 +5,14 @@ import { BaseIcon } from "..";
 
 type ButtonProps = {
   text: string;
+  handleClick: () => void;
 };
 
-const Button: FunctionComponent<ButtonProps> = ({ text }) => {
+const Button: FunctionComponent<ButtonProps> = ({ text, handleClick }) => {
   return (
     <button
       className={styles.button}
-      onClick={() => console.log("Add to cart!")}
+      onClick={handleClick}
     >
       {text}
       <BaseIcon src={"/icons/cart.svg"} alt={"cart"} width={40} height={40} />

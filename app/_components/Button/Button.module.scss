@@ -1,4 +1,4 @@
-@import './../../breakpoints.scss';
+@import "../../_styles/breakpoints.module.scss";
 
 @mixin unbuttonize {
   background-color: transparent;
@@ -39,7 +39,7 @@
     scale: calc(1.05);
   }
 
-  @media (min-width: $layout-breakpoint-tablet) {
+  @include tablet {
     min-height: 8rem;
     min-width: 36rem;
     font-size: 36px;
@@ -49,5 +49,6 @@
     position: absolute;
     top: 50%;
     transform: translate(50%, -50%);
+    fill: white;
   }
 }

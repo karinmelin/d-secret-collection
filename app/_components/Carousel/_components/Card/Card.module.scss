@@ -1,4 +1,4 @@
-@import "../../../../breakpoints.scss";
+@import '../../../../_styles/breakpoints.module.scss';
 
 .cardWrapper {
   position: relative;
@@ -15,33 +15,26 @@
   -5px 4px 7px lightgray, 5px 4px 7px lightgray;
   margin-bottom: 1rem;
 
-  @media (min-width: $layout-breakpoint-tablet) {
+  @include tablet {
     height: 495px;
     font-size: 16px;
     padding: 20px;
   }
 
-  @media (min-width: $layout-breakpoint-desktop) {
+  @include desktop {
     height: 560px;
     max-width: 820px;
   }
 }
 
-// .cardImageWrapper {
-// }
-
 .cardImage {
   position: absolute;
   top: 0;
+  width: 180px;
 
-  @media (min-width: $layout-breakpoint-tablet) {
-    width: 495px;
-    height: 495px;
-  }
-
-  @media (min-width: $layout-breakpoint-desktop) {
-    width: 560px;
-    height: 560px;
+  @include tablet {
+    height: 100%;
+    width: 380px;
   }
 }
 
@@ -52,7 +45,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @media (min-width: $layout-breakpoint-tablet) {
+  @include tablet {
     height: 50%;
   }
 }

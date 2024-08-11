@@ -12,7 +12,6 @@ type CardProps = {
 };
 
 const Card: FunctionComponent<CardProps> = ({
-  id,
   title,
   description,
   image,
