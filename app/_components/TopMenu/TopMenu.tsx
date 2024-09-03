@@ -6,6 +6,7 @@ import styles from "./TopMenu.module.scss";
 import filterData from '../../_data/filter-data.json';
 import { FilterSubmenu } from "./_components/FilterSubmenu";
 
+// Todo: move as component into Header
 const TopMenu = () => {
   const [showFilterMenu, setShowFilterMenu] = useState(false);
   const [showSortMenu, setShowSortMenu] = useState(false);
@@ -22,6 +23,7 @@ const TopMenu = () => {
         />
         <h1 className={styles.title}>The secret collection</h1>
       </div>
+      {/* Todo: move to filter */}
       <div className={styles.filters}>
         <ButtonLink
           icon={"/icons/woman.svg"}

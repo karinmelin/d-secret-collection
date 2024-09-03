@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
 import ApolloWrapper from "../lib/apollo-wrapper";
 import "./globals.css";
+import { ThemeProvider } from "@mui/material/styles";
+import { theme } from "./_styles/theme";
 
 const albertSans = Albert_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dior Showroom",
+  title: "D Showroom",
   description: "The secret collection",
 };
 

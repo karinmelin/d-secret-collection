@@ -1,10 +1,13 @@
+"use client"
 import { BaseIcon } from "@components";
 import { CartButton } from "../Cart";
 import styles from "./Header.module.scss";
+import { FunctionComponent, forwardRef } from "react";
+import { Box } from "@mui/material";
 
-const Header = () => {
+const Header: FunctionComponent = forwardRef(() => {
   return (
-    <header className={styles.header}>
+    <Box component={"header"} className={styles.header}>
       <BaseIcon
         className={styles.diorLogo}
         src="/icons/dior-logo.svg"
@@ -14,8 +17,8 @@ const Header = () => {
         priority
       />
       <CartButton />
-    </header>
+    </Box>
   );
-};
+});
 
 export default Header;
