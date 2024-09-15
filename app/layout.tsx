@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
-import ApolloWrapper from "../lib/apollo-wrapper";
 import "./globals.css";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./_styles/theme";
@@ -20,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={albertSans.className}>
-        <ApolloWrapper>{children}</ApolloWrapper>
+        {children}
       </body>
     </html>
   );
