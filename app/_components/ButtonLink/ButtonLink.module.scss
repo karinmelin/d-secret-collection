@@ -12,14 +12,20 @@
 .buttonLinkWrapper {
   display: flex;
   flex-direction: row;
+
+  svg {
+    margin-right: 0.5rem;
+  }
 }
 
 .icon {
-  margin-right: 10px;
+  margin-right: 1rem;
 }
 
 .button {
   @include unbuttonize;
   cursor: pointer;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }

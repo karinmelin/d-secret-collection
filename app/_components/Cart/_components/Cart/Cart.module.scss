@@ -1,11 +1,21 @@
+@import '../../../../_styles/breakpoints.module.scss';
+
 .wrapper {
-  width: 740px;
+  width: 80vw;
   height: 100%;
   background-color: white;
   clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
 
   &_inner {
-    padding: 2rem 0 2rem 6rem;
+    position: absolute;
+    left: 15%;
+    top: 5%;
+  }
+
+  @include tablet {
+    &_inner {
+      left: 13%;
+    }
   }
 }
 

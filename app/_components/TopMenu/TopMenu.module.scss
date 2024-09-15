@@ -27,25 +27,6 @@
   margin-bottom: 2rem;
 }
 
-.filters {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-
-  @media (min-width: $layout-breakpoint-tablet) {
-    width: 50%;
-    align-self: flex-end;
-    justify-content: space-around;
-  }
-
-  @media (min-width: $layout-breakpoint-desktop) {
-    grid-column: 3;
-    width: 100%;
-    justify-content: space-around;
-  }
-}
-
 .title {
   text-transform: uppercase;
   font-size: 30px;

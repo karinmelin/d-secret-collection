@@ -1,0 +1,20 @@
+@import '../../_styles/breakpoints.module.scss';
+
+.filters {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+
+  @include tablet {
+    width: 50%;
+    align-self: flex-end;
+    justify-content: space-around;
+  }
+
+  @include desktop {
+    grid-column: 3;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
